@@ -1,0 +1,8 @@
+<my-banner swiperArr="{{swiperArr}}"></my-banner>
+
+<view class="tobuy">
+  <view wx:for="{{buywayArr}}" wx:key="*this" bindtap="goPage" >
+    <image src="{{item.imgSrc}}" mode="widthFix" ></image>
+    <text>{{item.imgTxt}}</text>
+  </view>
+</view>

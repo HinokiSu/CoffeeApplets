@@ -1,0 +1,31 @@
+<!--pages/mypage/mypage.wxml-->
+<view class="topimage">
+  <image src="{{topimage}}" mode="widthFix"></image>
+</view>
+<view class="informationview1">
+<view>
+  <text>Hola,{{username}}\n</text> 
+  <text>三点几啦，饮茶先啦</text>
+</view>
+</view>
+<view class="informationview2">
+  <cover-view >
+      <cover-image src="{{selfimage}}"></cover-image>
+  </cover-view>
+  <text>GO会员\n</text>
+  <image src="{{iamge_level1}}" mode="widthFix"></image>
+  <view class="line"></view>
+  <view class="user_use">
+    <view wx:for="{{power_Arr}}" wx:key="*this" id="user_use{{item.id}}">
+        <image src="{{item.imagePower}}" mode="widthFix"></image>
+        <view>{{item.value}}</view>
+        <view>{{item.imageText}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="line"></view>
+<view class="onesinfor">
+<text >个人资料</text>
+<image src="{{arrow_point}}" class="onesinforimage" mode="widthFix"></image>
+</view>

@@ -1,0 +1,78 @@
+/* pages/mypage/mypage.wxss */
+.topimage {
+  width: 100vw;
+  height: calc(100vw/2345*1900);
+}
+
+.topimage image {
+  width: 100%;
+}
+
+.selfimage{
+  height: 100rpx;
+  width: 100rpx;
+  float:right;
+}
+.informationview1{
+ height: 100rpx;
+  justify-content:space-around;
+  background-color: whitesmoke;
+}
+.informationview2{
+  height: 350rpx;
+  background-color: white;
+  padding: 20rpx;
+  display:flexbox;
+  justify-content: space-around;
+  border-radius: 35rpx;
+  box-shadow: 0 0 20rpx #acacac;
+  margin: 0 30rpx;
+}
+.informationview2 image{
+width: 80rpx;
+}
+.line{
+  display: flex;
+  justify-self: flex-start;
+ margin-top: 30rpx;
+  width: 100%;
+  height: 2rpx;
+  background:black;
+}
+.user_use{
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.user_use view{
+  display: block;
+ text-align: center;
+  width: 150rpx;
+  height: 60rpx;
+}
+
+
+
+.onesinfor{
+  
+  margin: 20rpx;
+}
+.onesinfor text{
+  font-size: 150%;
+}
+.onesinfor image{
+  width: 60rpx;
+  height: 60rpx;
+float: right;
+}
+.informationview2 cover-view{
+width: 100rpx;
+height: 100rpx;
+display: block;
+float: right;
+border-radius: 30rpx;
+box-shadow: 0 0 10rpx 10rpx #acacac;
+}

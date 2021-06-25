@@ -1,0 +1,85 @@
+.sendback{
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 35rpx;
+  box-shadow: 0 0 5rpx #acacac;
+  padding: 5rpx;
+  display: block;
+  justify-content: space-between;
+}
+.sendback image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.tab {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.topTabSwiper {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  zoom: 1;
+}
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.tabBorer {
+  border-bottom: 1px solid gray;
+  color:black;
+}
+.productimage{
+  width: 100rpx;
+}
+.test{
+  width: 100%;
+  
+}
+.productimage_view{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap:wrap;
+}
+
+.orderdetail{
+display: block;
+height: 400rpx;
+}
+.orderdetail text{
+  width:130% ;
+  	height: 130%;
+  	display:flex;
+  	align-items:left;   
+ 	  justify-content:left;    
+}
+.productview{
+  display: flex;
+  flex-direction: column;
+  margin: 5rpx;
+  flex-direction: row;
+ width: 100rpx;
+  flex-wrap:wrap;background-color: aquamarine;
+}
+.productimage_view{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  width: 300rpx;  
+}
+.productimage_view image{
+ display: block;
+ width:100rpx;
+border:1px solid #000000;
+font-size:0;
+padding-block: 1rpx;
+margin-block: 1rpx;
+}
+
+
+
+

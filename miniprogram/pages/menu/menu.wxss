@@ -1,0 +1,85 @@
+swiper {
+  height: calc(100vw/1080*974);
+}
+
+.main {
+  background: #efefef;
+  width: 100%;
+  /*100vh 是整个屏幕的高（不包含tabBar） */
+  height: calc(100vh - calc(100vw/1080*974)); 
+}
+
+.left {
+  border-right: 1rpx solid #000;
+  width: 25%;
+  float: left;
+  height: calc(100vh - calc(100vw/1080*974)); 
+  box-sizing: border-box;
+}
+
+.left view {
+  border-bottom: 1rpx solid #000;
+  height: 80rpx;
+  line-height: 80rpx;   /* 行高 */
+  background: white;
+  text-align: center;
+  position: relative;
+}
+
+/* 将当前选中的项添加 左侧垂直线条 */
+.left view::before {
+  content: "";
+  background-attachment: #333999;
+  width: 10rpx;
+  height: 80rpx;
+  position: absolute;   /* 将线条定位在左侧 */
+  left: 0;
+  top: 0;
+}
+
+.left view.active::before {
+  background: #333999;
+}
+
+.right {
+  height: calc(100vh - calc(100vw/1080*974));
+  width: 75%;
+  float: right;
+
+  padding: 0 2%;
+  box-sizing: border-box; 
+}
+
+.right .title{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.right .content {
+  background: white;
+  padding: 1%;
+  padding-right: 0;
+  box-sizing: border-box;
+  display: flex;    /* 弹性布局 */
+  justify-content: flex-start;    /* 浮动顺排 */
+  flex-wrap: wrap;    /* 换行 */
+}
+
+.box {
+  width: 32%;
+  background: #ccf;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+.box image {
+  width: 90%;
+}
+
+.box text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 28rpx;
+  display: block;
+  white-space: nowrap;
+}
