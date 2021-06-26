@@ -175,3 +175,10 @@
   margin: 6rpx 20rpx;
   color: black;
 }
+
+/* 购物车中没有商品时gif图片 */
+.cart_null_gif {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}

@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/menu/menu",
     "pages/order/order",
     "pages/shoppingcart/shoppingcart",
     "pages/home/home",
-    "pages/menu/menu",
-
 
     "pages/mypage/mypage",
+    "pages/pay/pay",
 
     "components/banner/banner"
   ],
