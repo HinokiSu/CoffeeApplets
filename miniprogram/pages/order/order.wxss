@@ -1,3 +1,4 @@
+/* 顶部标题信息 */
 .order_top {
   box-sizing: content-box;
 }
@@ -9,4 +10,49 @@
   border: 5rpx solid #ccc;
   border-radius: 0 0 20rpx 20rpx;
   box-shadow: 0 2rpx 10rpx whitesmoke;
+}
+
+.order_content {
+  box-sizing: content-box;
+  margin: 20rpx 20rpx;
+}
+
+.order_items {
+  border: 10rpx solid whitesmoke;
+  border-radius: 25rpx;
+  box-shadow: -1rpx 3rpx 8rpx grey;
+
+}
+
+.order_location {
+  display: flex;
+  justify-content: left;
+  margin: 30rpx 0;
+  padding-bottom: 20rpx;
+  border-bottom: 4rpx solid gray;
+  
+}
+
+.order_goods_wrap {
+
+}
+
+.oder_goods_sigle_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_goods_name {
+
+ 
+}
+
+.order_goods_num {
+  display: flex;
+}
+
+.order_info_wrap {
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
 }

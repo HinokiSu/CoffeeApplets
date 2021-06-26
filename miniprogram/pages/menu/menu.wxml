@@ -21,7 +21,7 @@
             <text>\n￥{{items.money}}</text>
           </view>
           <view class="carplus">
-            <image src="/images/menu/icon/button_icon/carplus.png" bindtap="addOrder" mode="widthFix"></image>
+            <image src="/images/menu/icon/button_icon/carplus.png" bindtap="handleCartAdd" mode="widthFix"></image>
           </view>
         </view>
       </view>

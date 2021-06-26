@@ -2,6 +2,10 @@
 Page({
 
   data: {
+    // 商品对象
+    GoodsInfo: {},
+
+
     // banner的轮播图数组
     swiperArr: [
       "/images/banner/menu_banner_1.jpg",
@@ -199,27 +203,23 @@ Page({
     }
   },
 
-  //订单添加到数据库
-  addOrder(orderInfo){
-    wx.showLoading({                    //弹出加载提示，防止用户多次点击添加数据
-      title: '数据加载中……',
-      mask:true
-    })
-    db.collection('purchase_detail').add({
-    data:{
-      location:orderInfo.location,
-      purchaseArr:[
-        "/miniprogram/images/menu/products/jt_nt/sight.jpg",
-        "拿铁",
-        "18"
-      ],
-      datetime:new Date(),
-      test:"测试"
+  // 点击并添加商品到购物车
+  handleCartAdd(e) {
+    // 获取缓存中的购物车数组
+    let carts = wx.getStorageSync('cart') || [];    // || [] 转换格式, 第一次获取是空的
+    // 判断商品对象是否存在于购物车数组中
+    let index = cart.findIndex(v=>v.goods_id===this.GoodsInfo.goods_id);
+    if(index===-1) {
+      // 不存在, 第一次添加
+      this.GoodsInfo.num=1;
+      cart.push(this.GoodsInfo);    // 添加对象到数组中
+    } else {
+      // 已经存在购物车数据 执行 num++
+      cart[index].num++;
     }
-    }).then(res=>{            //结果
-      console.log(res)
-      wx.hideLoading()        //运行完隐藏加载中……的提示
-    })
+
+    // 将购物车添加回缓存中
+    wx.setStorageSync('cart', cart);
   }
 
 })
