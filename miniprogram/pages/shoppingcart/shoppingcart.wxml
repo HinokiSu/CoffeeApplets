@@ -1,0 +1,70 @@
+<view>
+  <view class="cart_top">
+    <image src="" mode="widthFix"></image>
+  </view>
+</view>
+
+<view class="cart_main">
+  <view class="cart_content">
+    <view class="cart_title">
+      <text>饮品与小食订单</text>
+    </view>
+
+    <view class="first_line"></view>
+
+    <view class="cart_item" wx:for="{{cart}}" wx:key="*goods_id">
+      <!-- 商品复选框 -->
+      <view class="cart_chk_wrap">
+        <checkbox-group bindtap="">
+          <checkbox></checkbox>
+        </checkbox-group>
+      </view>
+      <!-- 商品图片 -->
+      <navigator class="cart_img_wrap">
+        <image mode="widthFix" src="{{item.goods_sight}}"></image>
+      </navigator>
+
+      <!-- 商品信息 -->
+      <view class="cart_info_wrap">
+        <view class="goods_name">{{item.goods_name}}</view>
+        <view class="goods_price_wrap">
+          <view class="goods_price">{{item.goods_price}}</view>
+          <view class="cart_num_tool">
+            <view class="num_edit">
+              <image id="sub_icon" bindtap="" mode="widthFix" src="/images/cart/icon/sub.png"></image>
+            </view>
+            <view class="goods_num">{{item.num}}</view>
+            <view class="num_edit">
+              <image id="add_icon" bindtap="" mode="widthFix" src="/images/cart/icon/add.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="second_line"></view>
+
+<!-- 底部工具栏 -->
+<view class="footer_tool">
+  <!-- 全选 -->
+  <view class="all_chk_wrap">
+    <checkbox-group bindchange="">
+      <checkbox></checkbox>
+    </checkbox-group>
+  </view>
+
+  <!-- 总价格 -->
+  <view class="total_price_wrap">
+    <view class="total_price">
+      合计: <text class="total_price_text">￥20</text>
+    </view>
+  </view>
+
+  <!-- 结算 -->
+  <view class="order_pay_wrap" bindtap="addOrder">
+    <image class="order_pay_submit" mode="widthFix" src="/images/cart/icon/submit.png"></image>
+    <text id="submit_text">结算</text>
+  </view>
+</view>

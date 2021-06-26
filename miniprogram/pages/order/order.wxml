@@ -1,0 +1,57 @@
+<view class="sendback" >
+  <image src="{{sendbackimage}}"></image><text>\t想对你说</text>
+</view>
+<text>\n</text>
+<view class="topTabSwiper">
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>当前订单</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>历史订单</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+  <swiper-item>
+    <button type="primary" bindtap="getData">获取全部订单</button>
+   <!-- 订单列表容器 -->
+<view class="order_content">
+  <!-- 订单主体内容 -->
+  <view wx:for="{{dataObj}}"  wx:key="*this"  >
+  <view class="order_items">
+        <text>{{item.location}}</text>
+    <!-- 订单商品列表 -->
+    <view class="order_goods_wrap">
+      <view class="oder_goods_sigle_info">
+        <view class="order_goods_name">
+          <text>{{item.proName}}</text>
+        </view>
+        <view class="order_goods_num">
+          <text>X {{count}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+    <!-- 单个订单其他信息 -->
+    <view class="order_info_wrap">
+      <view class="order_date">
+        <text>{{item.datetime}}</text>
+      </view>
+      <view class="order_num">
+        <text>共{{count}}件商品</text>
+      </view>
+      <view class="oder_price">
+        合计：<text>￥{{item.proPrice}}X{{count}}</text>
+      </view>
+   
+    </view>
+    <view>-------------</view>
+  </view>
+</view>
+  </swiper-item>
+
+
+  <swiper-item>
+    <button type="primary" bindtap="getData">获取全部订单</button>
+      <view wx:for="{{dataObj}}"  wx:key="*this"  >
+        {{item.location}}--------
+      </view>
+    <button type="primary"  bindtap="getNumber">获取符合要求的数据数量</button>
+    <view>{{count}}</view>
+  </swiper-item>
+</swiper>

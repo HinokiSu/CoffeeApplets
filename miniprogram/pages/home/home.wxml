@@ -1,0 +1,16 @@
+<my-banner swiperArr="{{swiperArr}}"></my-banner>
+
+<view class="tobuy">
+  <view wx:for="{{buywayArr}}" wx:key="*this" bindtap="goPage" >
+    <image src="{{item.imgSrc}}" mode="widthFix" ></image>
+    <text>{{item.imgTxt}}</text>
+  </view>
+</view>
+
+<view class="page-section-spacing">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%"> 
+          <image src="{{imgSrc1}}" mode="widthFix"  class="productimage"></image>
+          <image src="{{imgSrc2}}" mode="widthFix"  class="productimage"></image>
+          <image src="{{imgSrc3}}" mode="widthFix"  class="productimage"></image>
+        </scroll-view>
+</view>

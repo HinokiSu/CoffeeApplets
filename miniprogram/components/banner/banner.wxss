@@ -1,0 +1,33 @@
+/* components/banner/banner.wxss */
+
+
+swiper image {
+  width: 100vw;
+}
+
+.banner {
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 180rpx;
+  overflow: hidden;
+}
+
+.dots view {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  background: #999;
+  display: inline-block;
+  margin-left: 20rpx;
+  transform: all .5s linear;
+}
+
+.dots view.active {
+  width: 40rpx;
+  background: #333999;
+}

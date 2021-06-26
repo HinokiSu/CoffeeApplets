@@ -1,0 +1,51 @@
+
+.tobuy {
+  margin-top: 60rpx;
+  padding: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tobuy view {
+  width: 48%;
+  margin-bottom: 20rpx;
+  background: white;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 0 10rpx #acacac;
+}
+
+.tobuy view image {
+  width: 100%;
+  display: block;
+}
+
+.tobuy text {
+  display: block;
+  text-align: center;
+  line-height: 50rpx;
+  padding-bottom: 30rpx;
+}
+.page-section-spacing{
+  margin-top: 60rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+.scroll-view_H image{
+  width: 500rpx;
+  height: 80rpx;
+}
+
+swiper {
+  height: calc(100vw/1125*756);   /* 调整高度， 100vw屏幕显示，1125图片宽，756图片高度，calc()计算*/
+}
