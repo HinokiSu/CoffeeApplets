@@ -1,0 +1,177 @@
+
+.cart_top {
+  background: #aaccaa;
+  width: 100%;
+  height: 200rpx;
+}
+
+.cart_main {
+  box-sizing: content-box;
+}
+
+.cart_title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: black;
+  border: 5rpx solid #ccc;
+  border-radius: 0 0 20rpx 20rpx;
+  box-shadow: 0 2rpx 10rpx whitesmoke;
+}
+
+.first_line {
+  display: flex;
+  padding: 5rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  color: black;
+}
+
+
+.cart_item {
+  display: flex;
+  border: 10rpx solid whitesmoke;
+  margin: 0 20rpx;
+  border-radius: 25rpx;
+  box-shadow: -1rpx 3rpx 8rpx grey;
+}
+
+.cart_chk_wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;    /* 水平居中*/
+  align-items: center;    /* 垂直居中 */
+}
+
+.cart_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;    /* 水平居中*/
+  align-items: center;    /* 垂直居中 */
+
+}
+
+.cart_img_wrap image {
+  width: 60%;
+  border-radius: 15rpx;
+}
+.cart_info_wrap {
+  flex: 4;
+  display: flex;
+  flex-direction: column;   /*主轴方向*/
+  justify-content: space-around;  /*主轴对齐方式 空白环绕*/
+}
+
+.goods_name {
+  display: -webkit-flex;
+  overflow: hidden;
+  box-orient: vertical;
+  line-clamp: 2;
+  color: black;
+  margin-left: 20rpx;
+  margin-bottom: 50rpx;
+}
+
+
+.goods_price_wrap {
+  display: flex;
+  justify-content: space-between;   /*两边放置*/
+  margin-left: 20rpx;
+  bottom: 0;
+}
+
+.goods_price {
+  color: brown;
+  font-size: 40rpx;
+}
+
+.cart_num_tool {
+  display: flex;
+  width: 150rpx;
+  height: 60rpx;
+  margin-right: 60rpx;
+}
+
+
+.num_edit{
+  width: 100rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.goods_num {
+  padding-top: 10rpx;
+}
+
+#sub_icon {
+  width: 75rpx;
+  height: 10rpx;
+  margin-right: 20rpx;
+}
+
+
+
+#add_icon {
+  width: 60rpx;
+  height: 10rpx;
+  margin-left: 25rpx;
+}
+
+
+/* 购物车 结算功能区  */
+
+.footer_tool {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  border-radius: 16rpx;
+  border-top: 2rpx solid #ccc;
+}
+
+/* 复选框 */
+.all_chk_wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 总价格 */
+.total_price_wrap {
+  flex: 2;
+  text-align: right;
+  margin-right: 50rpx;
+  margin-top: 20rpx;
+}
+
+/* 结算区域 */
+.order_pay_wrap {
+  display: flex;
+  flex: 2;
+  
+  margin: 10rpx 10rpx;
+  border-radius: 30rpx;
+  box-shadow: 0 0 10rpx white;
+  background-color: whitesmoke;
+}
+
+.order_pay_submit {
+  display: flex;
+  flex-direction: column;   /*主轴方向*/
+  justify-content: right; 
+  width: 60rpx;
+  border: 5 5 10rpx black;
+  margin-left: 50rpx;
+}
+
+#submit_text {
+  display: flex;
+  text-align: center;
+  margin: 6rpx 20rpx;
+  color: black;
+}

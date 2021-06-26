@@ -109,69 +109,7 @@ Page({
             "imgDesc": "精粹澳瑞白"
           }
         ]
-      },
-      {
-        "id": 5,
-        "title": "经典拿铁",
-        "subArr": [{
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "厚乳拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "陨石拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "香草拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "榛香燕麦拿铁"
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "title": "轻乳好茶",
-        "subArr": [{
-          "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-          "imgDesc": "满庭芳·茉莉轻乳茶"
-        }]
-      },
-      {
-        "id": 7,
-        "title": "果茶家族",
-        "subArr": [{
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "冰山杨梅桃"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "多肉杨梅"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "芒椰糯米饭"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "多肉荔枝"
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "title": "制冰小食",
-        "subArr": [{
-          "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-          "imgDesc": "冰山杨梅脆筒"
-        }]
-      },
+      } 
     ],
 
     //左侧的Id

@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/order/order",
+    "pages/shoppingcart/shoppingcart",
     "pages/home/home",
     "pages/menu/menu",
+
+    "pages/order/order",
     "pages/mypage/mypage",
+
     "components/banner/banner"
   ],
   "window": {
@@ -26,7 +29,14 @@
         "text": "点单",
         "iconPath": "/images/tabbar_icon/menu_icon.png",
         "selectedIconPath": "/images/tabbar_icon/menu_selected_icon.png"
-      },{
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "text": "购物车",
+        "iconPath": "/images/tabbar_icon/shoppingcart_icon.png",
+        "selectedIconPath": "/images/tabbar_icon/shoppingcart_selected_icon.png"
+      },
+      {
         "pagePath": "pages/order/order",
         "text": "订单",
         "iconPath": "/images/tabbar_icon/order_icon.png",
@@ -40,4 +50,6 @@
     ]
   },
   "sitemapLocation": "sitemap.json"
+
+
 }
