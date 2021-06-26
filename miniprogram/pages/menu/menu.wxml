@@ -15,8 +15,14 @@
       <view class="content">
         <view class="box" wx:for="{{item.subArr}}" wx:key="*this" wx:for-item="items">
           <!-- wx:for每次循环都会产生单独的item -->
-          <image src="{{items.imgSrc}}" mode="widthFix"></image>
-          <text>{{items.imgDesc}}</text>
+          <image src="{{items.imgSrc}}" mode="widthFix"  class="productimage"></image>
+          <view>
+            <text>{{items.imgDesc}}</text>
+            <text>\n￥{{items.money}}</text>
+          </view>
+          <view class="carplus">
+            <image src="/images/menu/icon/button_icon/carplus.png" bindtap="addOrder" mode="widthFix"></image>
+          </view>
         </view>
       </view>
     </view>

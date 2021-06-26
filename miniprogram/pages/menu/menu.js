@@ -10,107 +10,135 @@ Page({
     ],
 
     productArr: [{
-        "id": 0,
-        "title": "人气咖啡Top",
-        "subArr": [{
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "生椰拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "陨石拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/ice_houru_nt/sight.jpg",
-            "imgDesc": "冰厚乳拿铁"
-          },
-        ]
+      "id": 0,
+      "title": "人气咖啡Top",
+      "subArr": [
+       { imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/csht_nt/sight.jpg",
+       imgDesc:"冲绳黑糖拿铁",
+       money:"14"
       },
       {
-        "id": 1,
-        "title": "生椰家族",
-        "subArr": [{
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "椰青冰萃咖啡"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "生椰拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "生椰拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "陨石生椰拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "抹茶好喝椰"
-          },
-        ]
+        imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ice_hr_nt/sight.jpg",
+        imgDesc:"冰厚乳拿铁",
+        money:"13"
+      },
+      { imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jt_nt/sight.jpg",
+      imgDesc:"焦糖拿铁",
+      money:"15"
+    },
+    {
+      imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/bz_ms/sight.jpg",
+      imgDesc:"标准美式",
+      money:"10"
+    }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "生椰家族",
+      "subArr": [ 
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/yn_sy_nt/sight.jpg",
+          imgDesc:"云南.生椰拿铁",
+          money:"14"
+        },
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/yssy_nt/sight.jpg",
+          imgDesc:"陨石生椰拿铁",
+          money:"13"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "夏日冰咖",
+      "subArr": [ 
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/xybc_kf/sight.jpg",
+          imgDesc:"西柚冰萃咖啡",
+          money:"9"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "瑞纳冰",
+      "subArr": [
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ysnt_rnb/sight.jpg",
+          imgDesc:"陨石拿铁瑞纳冰",
+          money:"10"
+        },
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/yzok_rnb/sight.jpg",
+          imgDesc:"椰子OK瑞纳冰",
+          money:"11"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "大师咖啡",
+      "subArr": [
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ice_hyzs_nt/sight.jpg",
+          imgDesc:"冰海盐芝士拿铁",
+          money:"15"
+        },
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ice_tthr_nt/sight.jpg",
+          imgDesc:"冰桃桃厚乳拿铁",
+          money:"15"
+        },
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jbr_nt/sight.jpg",
+          imgDesc:"姜饼风味拿铁",
+          money:"14"
+        },
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jtbz_ms/sight.jpg",
+          imgDesc:"焦糖标准美式",
+          money:"10"
+        },
+      
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/mk/sight.jpg",
+          imgDesc:"摩卡",
+          money:"12"
+        },
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ttym_nt/sight.jpg",
+          imgDesc:"桃桃燕麦拿铁",
+          money:"13"
+        },
+        {
+          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ynhm_arb/sight.jpg",
+          imgDesc:"云南红蜜·澳瑞白",
+          money:"16"
+        },
+      ]
+    },
+    {
+      "id": 5,
+      "title": "经典拿铁",
+      "subArr": [ {
+        imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/zg_nt/sight.jpg",
+        imgDesc:"榛果拿铁",
+        money:"10"
       },
       {
-        "id": 2,
-        "title": "夏日冰咖",
-        "subArr": [{
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "冰厚乳拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "热恋蜜瓜厚乳拿铁"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "热恋蜜瓜气泡美式"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "西柚冰萃咖啡"
-          },
-        ]
+        imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jt_nt/sight.jpg",
+        imgDesc:"焦糖拿铁",
+        money:"11"
       },
       {
-        "id": 3,
-        "title": "瑞纳冰",
-        "subArr": [{
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "哈斯牛油果瑞纳冰"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "夏日桃桃冰"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "冰镇杨梅瑞纳冰"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "title": "大师咖啡",
-        "subArr": [{
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "标准美式"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "加浓美式"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "焦糖标准美式"
-          },
-          {
-            "imgSrc": "/images/menu/products/sy_nt/sight.jpg",
-            "imgDesc": "精粹澳瑞白"
-          }
-        ]
-      } 
-    ],
+        imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/kbqn/sight.jpg",
+        imgDesc:"卡布奇诺",
+        money:"13"
+      }
+      ]
+    }
+  ],
 
     //左侧的Id
     leftId: 'left0',
@@ -169,5 +197,29 @@ Page({
         return;
       }
     }
+  },
+
+  //订单添加到数据库
+  addOrder(orderInfo){
+    wx.showLoading({                    //弹出加载提示，防止用户多次点击添加数据
+      title: '数据加载中……',
+      mask:true
+    })
+    db.collection('purchase_detail').add({
+    data:{
+      location:orderInfo.location,
+      purchaseArr:[
+        "/miniprogram/images/menu/products/jt_nt/sight.jpg",
+        "拿铁",
+        "18"
+      ],
+      datetime:new Date(),
+      test:"测试"
+    }
+    }).then(res=>{            //结果
+      console.log(res)
+      wx.hideLoading()        //运行完隐藏加载中……的提示
+    })
   }
+
 })

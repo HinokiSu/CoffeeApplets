@@ -66,14 +66,19 @@ swiper {
 }
 
 .box {
-  width: 32%;
-  background: #ccf;
-  text-align: center;
+  width: 100%;
+  text-align: left;
   margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
 }
+.box text{
+  padding: 15rpx;
+}
+.box .productimage {
+  width: 120rpx;
+  align-items: center;
 
-.box image {
-  width: 90%;
 }
 
 .box text {
@@ -82,4 +87,15 @@ swiper {
   font-size: 28rpx;
   display: block;
   white-space: nowrap;
+  width: 300rpx;
+  margin-left: 20rpx;
+}
+.carplus{
+  width: 50rpx;
+  display: flex;
+}
+.carplus image{
+  align-items:flex-end;
+  float: right;
+  align-self: flex-end;
 }

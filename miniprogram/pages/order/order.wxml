@@ -1,24 +1,42 @@
-<view class="sendback">
-  <image src="{{sendbackimage}}"></image><text>\t想对你说</text>
+<!-- 订单页面标题头 -->
+<view class="order_top">
+    <view class="order_title">
+      <text>订单</text>
+    </view>
 </view>
-<text>\n</text>
-<view class="topTabSwiper">
-  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>当前订单</view>
-  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>历史订单</view>
-</view>
-<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
-  <swiper-item>
-    <view class="orderdetail">
-      <view wx:for="{{order_Arr}}" wx:key="*this" id="user_use{{item.id}}" class="productimage_view">
-         <text class="location">{{item.location}}</text>
-         <view class="test">\n{{item.date}} {{item.datetime}}</view><text>\n</text>
-            <view wx:for="{{item.productimage}}" wx:key="*this" id="{{item.id}}" class="productview" >
-             <image src="{{item.productimage}}" mode="widthFix" class="productimage"></image>
-            </view>
+
+<!-- 订单列表容器 -->
+<view class="order_content">
+  <!-- 订单主体内容 -->
+  <view class="order_items">
+    <view class="order_location">
+      <text class="location_name">玫瑰天街</text>
+    </view>
+    <!-- 订单商品列表 -->
+    <view class="order_goods_list">
+      <view class="order_goods_name">
+        <text>陨石拿铁</text>
+      </view>
+      <view class="order_goods_num">
+        <text>X 20</text>
+      </view>
+
+      <view class="order_goods_name">
+        <text>生椰拿铁</text>
+      </view>
+      <view class="order_goods_num">
+        <text>X 20</text>
       </view>
     </view>
-  </swiper-item>
-
-
-  <swiper-item><view class='swiper_con'>历史订单</view></swiper-item>
-</swiper>
+    <view class="order_info"></view>
+      <view class="order_date">
+        <text>2021-06-04 15:22</text>
+      </view>
+      <view class="order_num">
+        <text>共20件商品</text>
+      </view>
+      <view class="oder_price">
+        合计：<text>￥120</text>
+      </view>
+  </view>
+</view>
