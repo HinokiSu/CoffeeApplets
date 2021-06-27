@@ -5,23 +5,25 @@
   <!--左侧 -->
   <!-- data-myid="item.id 自定义属性-->
   <scroll-view class="left" scroll-y="true" scroll-into-view="{{leftId}}" >
-    <view wx:for="{{productArr}}" wx:key="*this" id="left{{item.id}}" class="scroll-view-item" data-myid="{{item.id}}" class="scroll-view-item {{leftActiveNum == item.id ? 'active' : ''}}" bindtap="leftClickFn">{{item.cat_title}}</view>
+    <view wx:for="{{productArr}}" wx:key="*this" id="left{{item.cat_id}}" class="scroll-view-item" data-myid="{{item.cat_id}}" class="scroll-view-item {{leftActiveNum == item.cat_id ? 'active' : ''}}" bindtap="leftClickFn">{{item.cat_title}}</view>
   </scroll-view>
 
   <!-- 右侧 -->
   <scroll-view class="right"  scroll-y="true" scroll-with-animation="true" bindscroll="rightScrollFn" scroll-into-view="{{rightId}}">
-    <view class="scroll-view-item rightblock" wx:for="{{productArr}}" wx:key="*this" id="right{{item.id}}">
-      <text class="title">{{item.cat_title}}</text>
+    <view class="scroll-view-item rightblock" wx:for="{{productArr}}" wx:key="*this" id="right{{item.cat_id}}">
+      <view class="title_wrap">
+        <text class="title">{{item.cat_title}}</text>
+      </view>
       <view class="content">
         <view class="box" wx:for="{{item.goodsArr}}" wx:key="*this" wx:for-item="items">
           <!-- wx:for每次循环都会产生单独的item -->
           <image src="{{items.imgSrc}}" mode="widthFix"  class="productimage"></image>
-          <view>
-            <text>{{items.imgDesc}}</text>
-            <text>\n￥{{items.goods_price}}</text>
+          <view class="goods_text">
+            <text>{{items.goods_name}}</text>
+            <text>￥{{items.goods_price}}</text>
           </view>
-          <view class="carplus">
-            <image src="/images/menu/icon/button_icon/carplus.png" bindtap="handleCartAdd" mode="widthFix"></image>
+          <view class="carplus" data-shopid="{{items.goods_id}}" data-catid="{{item.cat_id}}" bindtap="handleCartAdd">
+            <image src="/images/menu/icon/button_icon/carplus.png" mode="widthFix"></image>
           </view>
         </view>
       </view>

@@ -1,7 +1,8 @@
 // components/banner/banner.js
 // 组件Component
 Component ({
-
+  // 将组件中的class暴露出来
+  externalClasses: ['banner', 'dots'],
   properties: {
     swiperArr: {
       // 定义类型

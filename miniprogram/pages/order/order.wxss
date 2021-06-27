@@ -18,6 +18,7 @@
 }
 
 .order_items {
+
   border: 10rpx solid whitesmoke;
   border-radius: 25rpx;
   box-shadow: -1rpx 3rpx 8rpx grey;
@@ -33,18 +34,11 @@
   
 }
 
-.order_goods_wrap {
 
-}
 
 .oder_goods_sigle_info {
   display: flex;
   justify-content: space-between;
-}
-
-.order_goods_name {
-
- 
 }
 
 .order_goods_num {

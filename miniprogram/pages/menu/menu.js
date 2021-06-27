@@ -1,21 +1,27 @@
 // pages/menu/menu.js
 Page({
-
   data: {
     // 商品对象数据结构
     /*
-      商品ID goods_id | 商品名称 goods_name |  商品价格 goods_price | 商品缩略图 imgSrc 
+      商品ID goods_id | 商品名称 goods_name |  商品价格 goods_price | 商品缩略图 imgSrc  | 购买的商品数量 | 
+      商品ID从1开始
     */
 
     // banner的轮播图数组
     swiperArr: [
-      "/images/banner/menu_banner_1.jpg",
-      "/images/banner/menu_banner_2.jpg",
-      "/images/banner/menu_banner_3.jpg"
+      "/images/banner/meun_banner/m_banner_1.jpg",
+      "/images/banner/meun_banner/m_banner_2.jpg",
+      "/images/banner/meun_banner/m_banner_3.jpg",
+      "/images/banner/meun_banner/m_banner_4.jpg",
+      "/images/banner/meun_banner/m_banner_5.jpg",
+      "/images/banner/meun_banner/m_banner_6.jpg"
     ],
 
     // 商品数组
-    //  商品类别ID cat_id | 商品类别名称 cat_title | 商品数组 goodsArr
+    /*  
+      商品类别ID cat_id | 商品类别名称 cat_title | 商品数组 goodsArr
+      商品类别ID从0开始
+    */
     productArr: [
       {
         "cat_id": 0,
@@ -25,26 +31,34 @@ Page({
               goods_id: "1",
               goods_name:"冲绳黑糖拿铁",
               goods_price:"14",
-              imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/csht_nt/sight.jpg" 
+              goods_num: 0,
+              goods_checked: false,
+              imgSrc:"/images/menu/products/csht_nt/sight.jpg" 
             },
             {
               goods_id: "2",
               goods_name:"冰厚乳拿铁",
               goods_price:"13",
-              imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ice_hr_nt/sight.jpg"
+              goods_num: 0,
+              goods_checked: false,
+              imgSrc:"/images/menu/products/ice_hr_nt/sight.jpg"
             },
             {
               goods_id: "3",
               goods_name:"焦糖拿铁",
               goods_price:"15",
-              imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jt_nt/sight.jpg"
+              goods_num: 0,
+              goods_checked: false,
+              imgSrc:"/images/menu/products/jt_nt/sight.jpg"
               
             },
             {
               goods_id: "4",
               goods_name:"标准美式",
               goods_price:"10",
-              imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/bz_ms/sight.jpg"
+              goods_num: 0,
+              goods_checked: false,
+              imgSrc:"/images/menu/products/bz_ms/sight.jpg"
             }
           ]
         },
@@ -56,13 +70,17 @@ Page({
             goods_id: "5",
             goods_name:"云南.生椰拿铁",
             goods_price:"14",
-            imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/yn_sy_nt/sight.jpg"  
+            goods_num: 0,
+            goods_checked: false,
+            imgSrc:"/images/menu/products/yn_sy_nt/sight.jpg"  
           },
           {
             goods_id: "6",
             goods_name:"陨石生椰拿铁",
             goods_price:"13",
-            imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/yssy_nt/sight.jpg"      
+            goods_num: 0,
+            goods_checked: false,
+            imgSrc:"/images/menu/products/yssy_nt/sight.jpg"      
           }
         ]
       },
@@ -73,8 +91,10 @@ Page({
           {
             goods_id: "7",
             goods_name:"西柚冰萃咖啡",
-            goods_price:"9",            
-            imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/xybc_kf/sight.jpg"
+            goods_price:"9",
+            goods_num: 0,
+            goods_checked: false,       
+            imgSrc:"/images/menu/products/xybc_kf/sight.jpg"
           }
         ]
      },
@@ -85,14 +105,18 @@ Page({
         {
           goods_id: "8",
           goods_name:"陨石拿铁瑞纳冰",
-          goods_price:"10",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ysnt_rnb/sight.jpg"
+          goods_price:"10",
+          goods_num: 0,
+          goods_checked: false,     
+          imgSrc:"/images/menu/products/ysnt_rnb/sight.jpg"
         },
         {
           goods_id: "9",
           goods_name:"椰子OK瑞纳冰",
           goods_price:"11",
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/yzok_rnb/sight.jpg"
+          goods_num: 0,
+          goods_checked: false,
+          imgSrc:"/images/menu/products/yzok_rnb/sight.jpg"
         }
       ]
     },
@@ -103,45 +127,59 @@ Page({
         {
           goods_id: "10",
           goods_name:"冰海盐芝士拿铁",
-          goods_price:"15",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ice_hyzs_nt/sight.jpg",   
+          goods_price:"15",
+          goods_num: 0,
+          goods_checked: false,       
+          imgSrc:"/images/menu/products/ice_hyzs_nt/sight.jpg",   
         },
         {
           goods_id: "11",
           goods_name:"冰桃桃厚乳拿铁",
-          goods_price:"15",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ice_tthr_nt/sight.jpg",
+          goods_price:"15",
+          goods_num: 0,
+          goods_checked: false,         
+          imgSrc:"/images/menu/products/ice_tthr_nt/sight.jpg",
          
         },
         {
           goods_id: "12",
           goods_name:"姜饼风味拿铁",
-          goods_price:"14",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jbr_nt/sight.jpg",
+          goods_price:"14",
+          goods_num: 0,
+          goods_checked: false,        
+          imgSrc:"/images/menu/products/jbr_nt/sight.jpg",
         },
         {
           goods_id: "13",
           goods_name:"焦糖标准美式",
-          goods_price:"10",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jtbz_ms/sight.jpg",   
+          goods_price:"10",
+          goods_num: 0,
+          goods_checked: false,        
+          imgSrc:"/images/menu/products/jtbz_ms/sight.jpg",   
         },
         {
           goods_id: "14",
           goods_name:"摩卡",
-          goods_price:"12",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/mk/sight.jpg",
+          goods_price:"12",
+          goods_num: 0,
+          goods_checked: false,         
+          imgSrc:"/images/menu/products/mk/sight.jpg",
         },
         {
           goods_id: "15",
           goods_name:"桃桃燕麦拿铁",
-          goods_price:"13",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ttym_nt/sight.jpg",    
+          goods_price:"13",
+          goods_num: 0,
+          goods_checked: false,        
+          imgSrc:"/images/menu/products/ttym_nt/sight.jpg",    
         },
         {
           goods_id: "16",
           goods_name:"云南红蜜·澳瑞白",
-          goods_price:"16",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/ynhm_arb/sight.jpg", 
+          goods_price:"16",
+          goods_num: 0,
+          goods_checked: false,         
+          imgSrc:"/images/menu/products/ynhm_arb/sight.jpg", 
         },
       ]
     },
@@ -151,25 +189,30 @@ Page({
       "goodsArr": [ {
         goods_id: "17",
         goods_name:"榛果拿铁",
-        goods_price:"10",        
-        imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/zg_nt/sight.jpg",        
+        goods_price:"10",
+        goods_num: 0,
+        goods_checked: false,      
+        imgSrc:"/images/menu/products/zg_nt/sight.jpg",        
         },
         {
           goods_id: "18",
           goods_name:"焦糖拿铁",
-          goods_price:"11",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/jt_nt/sight.jpg",          
+          goods_price:"11",
+          goods_num: 0,
+          goods_checked: false,        
+          imgSrc:"/images/menu/products/jt_nt/sight.jpg",          
         },
         {
           goods_id: "18",
           goods_name:"卡布奇诺",
-          goods_price:"13",          
-          imgSrc:"cloud://coffee-6gdizycb4a945201.636f-coffee-6gdizycb4a945201-1306337290/images/menu/products/kbqn/sight.jpg",    
+          goods_price:"13",
+          goods_num: 0,
+          goods_checked: false,        
+          imgSrc:"/images/menu/products/kbqn/sight.jpg",    
         }
       ]
     }
-  ],
-
+    ],
     //左侧的Id
     leftId: 'left0',
     // 左侧当前项
@@ -233,19 +276,35 @@ Page({
 
   // 点击并添加商品到购物车
   handleCartAdd(e) {
+    // 获取当前商品的商品类别
+    let catid = e.currentTarget.dataset.catid;
+    // 获取wxml中的data-shopid中的值
+    let shopid = e.currentTarget.dataset.shopid;
+    console.log(catid);
+    console.log(shopid);
+    // 获取data中的 商品类别列表
+    var product_Arr = this.data.productArr;
+    // 根据商品类别和商品id，查找商品
+    let index_cat = product_Arr.findIndex(v=>v.cat_id === catid);
+    // 查找到的类别
+    let cat_obj = product_Arr[index_cat]
+    // 查找该商品数组
+    let index_goods = cat_obj.goodsArr.findIndex(v=>v.goods_id === shopid);
+    // 根据索引，查找到达商品对象
+    this.GoodsInfo = cat_obj.goodsArr[index_goods];
+
     // 获取缓存中的购物车数组
     let cart = wx.getStorageSync('cart') || [];    // || [] 转换格式, 第一次获取是空的
     // 判断商品对象是否存在于购物车数组中
     let index = cart.findIndex(v=>v.goods_id===this.GoodsInfo.goods_id);
     if(index===-1) {
       // 不存在, 第一次添加
-      this.GoodsInfo.num=1;
+      this.GoodsInfo.goods_num=1;
       cart.push(this.GoodsInfo);    // 添加对象到数组中
     } else {
       // 已经存在购物车数据 执行 num++
-      cart[index].num++;
+      cart[index].goods_num++;
     }
-    console.log(this.GoodsInfo.basicInfo);
     // 弹窗提示
     wx.showToast({
       title: 'Enjoy',
@@ -261,17 +320,7 @@ Page({
 
     // 将购物车添加回缓存中
     wx.setStorageSync('cart', cart);
-  },
+  }
 
-
-
-  /*
-      ！！！！  未实现功能 ！！！！
-  */
-
-  // 获取商品详细数据
-  // async getGoodsDetail(goods_id) {
-  //   const res = await request({url:"/goods/", data:{goods_id}});     // "" 中填写接口
-  // }
 
 })

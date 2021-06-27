@@ -6,9 +6,9 @@ Page({
    */
   data: {
     swiperArr: [
-      "/images/banner/banner_1.gif",
-      "/images/banner/banner_2.gif",
-      "/images/banner/banner_3.gif"
+      "/images/banner/home_banner/banner_1.gif",
+      "/images/banner/home_banner/banner_2.gif",
+      "/images/banner/home_banner/banner_3.gif"
     ],
     // 购买方式
     buywayArr: [
