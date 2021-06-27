@@ -50,15 +50,15 @@ Page({
       })
     })
 
-    db.collection('purchase_detail').where({
-      datetime: this.datetime
-    }).count().then(res => {
-      console.log(datetime)
-      console.log("今日数量",res.total)
-      this.setData({
-        count:res.total
-      })
-    })
+    // db.collection('purchase_detail').where({
+    //   datetime: this.datetime
+    // }).count().then(res => {
+    //   console.log(datetime)
+    //   console.log("今日数量",res.total)
+    //   this.setData({
+    //     count:res.total
+    //   })
+    // })
 
     },
 
