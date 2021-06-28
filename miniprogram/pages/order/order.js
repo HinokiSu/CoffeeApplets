@@ -40,6 +40,6 @@ Page({
    },
 
   onShow: function (options) {
-    //this.getData();
+    this.getData();
   },
 })
