@@ -129,7 +129,7 @@ Page({
       }
     }
     
-    // ，并删除缓存区其对应的对象
+    // 此循环方式修复了无法删除多个的Bug，并删除缓存区其对应的对象
     for(var i=checked_index_Arr.length-1; i>=0; i--) {
       cart_data.splice([checked_index_Arr[i]],1);
     }
