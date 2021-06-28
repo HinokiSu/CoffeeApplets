@@ -12,7 +12,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentData: 0,
     // 订单数组
     order: [],
 
@@ -41,6 +40,6 @@ Page({
    },
 
   onShow: function (options) {
-    this.getData();
+    //this.getData();
   },
 })

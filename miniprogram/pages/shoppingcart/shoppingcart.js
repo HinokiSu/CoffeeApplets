@@ -27,7 +27,7 @@ Page({
     this.setData({
       cart: cart_data,
     });
-    // 初次加载时，将数据写入缓冲中，避免已勾选的数据，无法计算金额和数量
+    // 初次加载时，将数据写入缓存中，避免已勾选的数据，无法计算金额和数量
     this.setCart(cart_data);
   },
 
@@ -99,12 +99,12 @@ Page({
       });
       if(res.confirm) {
         cart.splice(index, 1);
-        this.setCart(cart);   // 重新写回缓冲和data中
+        this.setCart(cart);   // 重新写回缓存和data中
       } 
     } else {
       // 进行修改数量
       cart[index].goods_num += operation;
-      // 重新写回缓冲和data中
+      // 重新写回缓存和data中
       this.setCart(cart);
     }
   },
@@ -113,27 +113,27 @@ Page({
   async handlePay() {
     // 待提交到数据库中的数据数组
     var sub_Arr = [];
-    // 获取缓冲区的数据
+    // 获取缓存区的数据
     const cart_data = wx.getStorageSync('cart') || [];
     // 已勾选商品的索引数组
-    var index_Arr = [];
+    let checked_index_Arr = [];
     
     // 遍历，并找到勾选的商品
     for(let i=0; i<cart_data.length; i++) {
-      if(cart_data[i].goods_checked) {
-        // 已勾选的对象的索引添加到索引数组
-        index_Arr.push(cart_data[i]);
+      if(cart_data[i].goods_checked == true) {
         // 添加索引数组中对应商品的对象
         sub_Arr.push(cart_data[i]);
+        // 勾选的对象的索引添加到索引数组
+        checked_index_Arr.push(i);
+        
       }
     }
-    // console.log(index_Arr);
-    // console.log(sub_Arr);
-    // ，并删除缓冲区其对应的对象
-    for(var i=0; i<index_Arr.length; i++) {
-      cart_data.splice(index_Arr[i], 1);
+    
+    // ，并删除缓存区其对应的对象
+    for(var i=checked_index_Arr.length-1; i>=0; i--) {
+      cart_data.splice([checked_index_Arr[i]],1);
     }
-    // console.log(cart_data);
+    
     console.log(datetime);
     // 将待提交的数据插入数据库中
     db.collection('order_list').add({
@@ -152,7 +152,12 @@ Page({
         })
       }
     })
-    // 重新写回缓冲
+
+    // console.log("index", checked_index_Arr);
+    // console.log("sub", sub_Arr);
+    // console.log("cart",cart_data);
+
+    // 重新写回缓存
     this.setCart(cart_data);
   }
 

@@ -3,12 +3,13 @@
   <image src="{{topimage}}" mode="widthFix"></image>
 </view>
 <view class="informationview1">
-<view class="top_text">
-  <text>Hola, {{userInfo.nickName}}</text> 
-  <view class="top_text_2">
-    <text>三点几啦，饮茶先啦</text>
+  <view class="top_text">
+    <text>Hola, </text>
+    <open-data type="userNickName"></open-data>
+    <view class="top_text_2">
+      <text>三点几啦，饮茶先啦</text>
+    </view>
   </view>
-</view>
 </view>
 <view class="informationview2">
   <view class="avatar">
@@ -19,15 +20,14 @@
   <view class="line"></view>
   <view class="user_use">
     <view wx:for="{{power_Arr}}" wx:key="*this" id="user_use{{item.id}}">
-        <image src="{{item.imagePower}}" mode="widthFix"></image>
-        <view>{{item.value}}</view>
-        <view>{{item.imageText}}</view>
+      <image src="{{item.imagePower}}" mode="widthFix"></image>
+      <view>{{item.value}}</view>
+      <view>{{item.imageText}}</view>
     </view>
   </view>
 </view>
-
 <view class="line"></view>
 <view class="onesinfor">
-<text >个人资料</text>
-<image src="{{arrow_point}}" class="onesinforimage" mode="widthFix"></image>
+  <text>个人资料</text>
+  <image src="{{arrow_point}}" class="onesinforimage" mode="widthFix"></image>
 </view>

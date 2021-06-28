@@ -45,9 +45,7 @@
       <image class="cart_null_gif" mode="widthFix" src="/images/cart/gif/cart_null.gif"></image>
     </block>
   </view>
-
 </view>
-
 <view class="second_line"></view>
 
 <!-- 底部工具栏 -->
