@@ -3,7 +3,7 @@ Page({
   data: {
     // 商品对象数据结构
     /*
-      商品ID goods_id | 商品名称 goods_name |  商品价格 goods_price | 商品缩略图 imgSrc  | 购买的商品数量 | 
+      商品ID goods_id | 商品名称 goods_name |  商品价格 goods_price | 商品缩略图 imgSrc  | 购买的商品数量 goods_num | 商品是否被选中(用于购物车) goods_checked 
       商品ID从1开始
     */
 
@@ -291,7 +291,6 @@ Page({
     let index_goods = cat_obj.goodsArr.findIndex(v=>v.goods_id === shopid);
     // 根据索引，查找到达商品对象
     this.GoodsInfo = cat_obj.goodsArr[index_goods];
-
     // 获取缓存中的购物车数组
     let cart = wx.getStorageSync('cart') || [];    // || [] 转换格式, 第一次获取是空的
     // 判断商品对象是否存在于购物车数组中
@@ -311,12 +310,10 @@ Page({
       // true 防止用户持续点击
       mask: true,
       success:(result) => {
-
       },
       fail: () => {},
       complete:() => {}
     });
-
     // 将购物车添加回缓存中
     wx.setStorageSync('cart', cart);
   }
