@@ -47,7 +47,7 @@ swiper {
   width: 75%;
   float: right;
 
-  padding: 0 2%;
+  padding: 0 1%;
   box-sizing: border-box; 
 }
 
@@ -58,6 +58,10 @@ swiper {
   border: 4rpx solid ghostwhite;
   border-radius: 0 0 2rpx;
   margin-bottom: 4rpx;
+}
+
+.title_wrap text {
+  margin: 10rpx;
 }
 
 /* 商品类别内部 内容 */
@@ -74,8 +78,11 @@ swiper {
 /* 商品类别内部块 */
 .rightblock {
   margin: 10rpx 0;
-  border: 6rpx  solid steelblue;
-  border-radius: 10rpx;
+  
+  border-radius: 15rpx;
+  background: white;
+  box-shadow: 0 0 10rpx #acacac;
+  overflow: hidden;
 }
 
 /* 每一个商品的容器 */

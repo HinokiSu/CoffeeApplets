@@ -1,52 +1,110 @@
 /* 顶部标题信息 */
-.order_top {
-  box-sizing: content-box;
+.top_img {
+  position: relative;
+}
+.t_img {
+  width: 100%;
+  height: calc(100vh/1125*525);
 }
 
 .order_title {
-  padding: 20rpx;
-  font-size: 36rpx;
-  color: black;
-  border: 5rpx solid #ccc;
-  border-radius: 0 0 20rpx 20rpx;
-  box-shadow: 0 2rpx 10rpx whitesmoke;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 100%;
 }
 
-.order_content {
-  box-sizing: content-box;
-  margin: 20rpx 20rpx;
+.order_title text {
+  font-size: 60rpx;
+  color: white;
 }
 
-.order_items {
-
-  border: 10rpx solid whitesmoke;
-  border-radius: 25rpx;
-  box-shadow: -1rpx 3rpx 8rpx grey;
-
-}
-
-.order_location {
+/* 订单主体 */
+.order_main {
+  margin-top: -100rpx;
+  position: relative;
   display: flex;
-  justify-content: left;
-  margin: 30rpx 0;
-  padding-bottom: 20rpx;
-  border-bottom: 4rpx solid gray;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   
 }
 
+.order_items {
+  width: 85%;
+  box-sizing: content-box;
+  margin: 20rpx 20rpx;
+  padding: 16rpx;
+  margin-bottom: 10rpx;
+  background: white;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx #acacac;
+  overflow: hidden;
+}
+
+.order_date {
+  font-size: 20rpx;
+}
+
+.line {
+  display: flex;
+  justify-self: flex-start;
+  margin-top: 10rpx;
+  width: 100%;
+  height: 6rpx;
+  border: 1rpx solid #333999;
+  border-radius: 30rpx;
+  background: #333999;
+  box-shadow: 0 2rpx 4rpx 1rpx white;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+
+}
 
 
-.oder_goods_sigle_info {
+.order_goods_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.order_goods_wrap text {
+  font-size: 28rpx;
+}
+
+.order_goods_sigle_info {
   display: flex;
   justify-content: space-between;
+  margin: 4rpx 4rpx;
 }
 
-.order_goods_num {
+.order_goods_price_and_num {
   display: flex;
 }
 
+
+.line_bottom {
+  display: flex;
+  justify-self: flex-start;
+  width: 100%;
+  height: 4rpx;
+  margin-top: 14rpx;
+  border: 1rpx solid whitesmoke;
+  border-radius: 30rpx;
+  background: rgb(187, 188, 194);
+  box-shadow: 0 2rpx 4rpx 1rpx white;
+  overflow: hidden;
+  
+}
 .order_info_wrap {
-  margin: 20rpx 0;
   display: flex;
   justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.order_info_wrap text {
+  font-size: 30rpx;
+}
+
+.order_num {
+  display: flex;
 }

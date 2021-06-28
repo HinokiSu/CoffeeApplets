@@ -14,7 +14,6 @@ Page({
       "/images/banner/meun_banner/m_banner_3.jpg",
       "/images/banner/meun_banner/m_banner_4.jpg",
       "/images/banner/meun_banner/m_banner_5.jpg",
-      "/images/banner/meun_banner/m_banner_6.jpg"
     ],
 
     // 商品数组

@@ -8,6 +8,13 @@
   width: 100%;
 }
 
+.top_text {
+  margin-left: 40rpx;
+}
+top_text_2 {
+  display: flex;
+}
+
 .selfimage{
   height: 100rpx;
   width: 100rpx;
@@ -68,11 +75,14 @@ width: 80rpx;
   height: 60rpx;
 float: right;
 }
-.informationview2 cover-view{
-width: 100rpx;
-height: 100rpx;
-display: block;
-float: right;
-border-radius: 30rpx;
-box-shadow: 0 0 10rpx 10rpx #acacac;
+
+.informationview2 .avatar{
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  float: right;
+  background: white;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx #acacac;
+  overflow: hidden;
 }

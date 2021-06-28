@@ -1,22 +1,47 @@
 .cart_top {
-  display: flex;
-  justify-content: center;    /* 水平居中*/
-  align-items: center;    /* 垂直居中 */
+  position: relative;
+}
+
+.cart_top image {
   width: 100%;
-  overflow: hidden;
+  height: calc(100vh/1125*525);
+}
+.cart_top_title {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}
+
+.cart_top_title text {
+  font-size: 60rpx;
+  color: white;
 }
 
 .cart_main {
   box-sizing: border-box;
+  margin-top: -50rpx;
+
+  position: relative;
+  
 }
 
 .cart_title {
-  padding: 20rpx;
-  font-size: 36rpx;
-  color: black;
-  border: 5rpx solid #ccc;
-  border-radius: 0 0 20rpx 20rpx;
-  box-shadow: 0 2rpx 10rpx whitesmoke;
+  width: 100%;
+  box-sizing: content-box;
+  margin: 20rpx 0;
+  padding: 16rpx 0;
+  margin-bottom: 10rpx;
+  background: white;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx #acacac;
+  overflow: hidden;
+
+
+}
+.cart_title text {
+  margin-left: 30rpx;
 }
 
 .first_line {

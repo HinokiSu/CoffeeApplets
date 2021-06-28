@@ -1,8 +1,14 @@
 // pages/shoppingcart/shoppingcart.js
 import { getSetting, chooseAddress, openSetting, showModal ,showToast} from "../../utils/asyncWx.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
-Page({
 
+//获取当前系统日期和时间
+var util = require('../../utils/util'); //参数是util.js所在的路径
+var datetime=util.getDate()
+// 获取数据库引用
+const db=wx.cloud.database()
+
+Page({
   /**
    * 页面的初始数据
    */
@@ -11,17 +17,18 @@ Page({
     cart: [],
     allChecked: false,
     totalPrice: 0,
-    totalNum: 0
+    totalNum: 0,
   },
-
 
   // 获取缓存中的数据
   onShow() {
     // 获取缓存中的购物车数据
     const cart_data = wx.getStorageSync('cart') || [];
     this.setData({
-      cart: cart_data
+      cart: cart_data,
     });
+    // 初次加载时，将数据写入缓冲中，避免已勾选的数据，无法计算金额和数量
+    this.setCart(cart_data);
   },
 
   // 商品被选中
@@ -102,12 +109,52 @@ Page({
     }
   },
 
-  // 点击结算
+  // 点击结算，将购物车已选中的商品添加到数据库中（暂时）
   async handlePay() {
-    // 跳转到支付页面
-    wx.navigateTo({
-      url: '/pages/pay/pay',
-    });
+    // 待提交到数据库中的数据数组
+    var sub_Arr = [];
+    // 获取缓冲区的数据
+    const cart_data = wx.getStorageSync('cart') || [];
+    // 已勾选商品的索引数组
+    var index_Arr = [];
+    
+    // 遍历，并找到勾选的商品
+    for(let i=0; i<cart_data.length; i++) {
+      if(cart_data[i].goods_checked) {
+        // 已勾选的对象的索引添加到索引数组
+        index_Arr.push(cart_data[i]);
+        // 添加索引数组中对应商品的对象
+        sub_Arr.push(cart_data[i]);
+      }
+    }
+    // console.log(index_Arr);
+    // console.log(sub_Arr);
+    // ，并删除缓冲区其对应的对象
+    for(var i=0; i<index_Arr.length; i++) {
+      cart_data.splice(index_Arr[i], 1);
+    }
+    // console.log(cart_data);
+    console.log(datetime);
+    // 将待提交的数据插入数据库中
+    db.collection('order_list').add({
+      data: {
+        'order_date': datetime,
+        'total_num': this.data.totalNum,
+        'total_price': this.data.totalPrice,
+        'goods_list': sub_Arr
+      },
+      success:function(res) {
+        console.log(res._id)
+        wx.showModal({
+          title: 'success',
+          content: '支付成功',
+          showCancel: false
+        })
+      }
+    })
+    // 重新写回缓冲
+    this.setCart(cart_data);
   }
 
+  
 })

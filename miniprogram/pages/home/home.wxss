@@ -12,8 +12,8 @@
   margin-bottom: 20rpx;
   background: white;
   border-radius: 20rpx;
-  overflow: hidden;
   box-shadow: 0 0 10rpx #acacac;
+  overflow: hidden;
 }
 
 .tobuy view image {

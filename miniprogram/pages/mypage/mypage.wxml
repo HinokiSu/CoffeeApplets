@@ -3,15 +3,17 @@
   <image src="{{topimage}}" mode="widthFix"></image>
 </view>
 <view class="informationview1">
-<view>
-  <text>Hola,{{username}}\n</text> 
-  <text>三点几啦，饮茶先啦</text>
+<view class="top_text">
+  <text>Hola, {{userInfo.nickName}}</text> 
+  <view class="top_text_2">
+    <text>三点几啦，饮茶先啦</text>
+  </view>
 </view>
 </view>
 <view class="informationview2">
-  <cover-view >
-      <cover-image src="{{selfimage}}"></cover-image>
-  </cover-view>
+  <view class="avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
   <text>GO会员\n</text>
   <image src="{{iamge_level1}}" mode="widthFix"></image>
   <view class="line"></view>

@@ -1,6 +1,7 @@
-<view>
-  <view class="cart_top">
-    <image src="/images/cart/background/top_img.png" mode="widthFix"></image>
+<view class="cart_top">
+  <image src="/images/cart/background/top_img.png" mode="widthFix"></image>
+  <view class="cart_top_title">
+    <text>购物车</text>
   </view>
 </view>
 
